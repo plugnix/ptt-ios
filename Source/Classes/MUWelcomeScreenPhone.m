@@ -41,7 +41,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    self.navigationItem.title = @"Mumble";
+    self.navigationItem.title = @"PTT";
     self.navigationController.toolbarHidden = YES;
 
     UINavigationBar *navBar = self.navigationController.navigationBar;
@@ -97,7 +97,7 @@
     return 1;
 #endif
     if (section == 0)
-        return 3;
+        return 2 ;
     return 0;
 }
 
@@ -133,11 +133,10 @@
     
     /* Servers section. */
     if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            cell.textLabel.text = NSLocalizedString(@"Public Servers", nil);
-        } else if (indexPath.row == 1) {
-            cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
-        } else if (indexPath.row == 2) {
+       if (indexPath.row == 0) {
+            cell.textLabel.text = NSLocalizedString(@"My Servers", nil);
+        }
+        else if (indexPath.row == 1) {
             cell.textLabel.text = NSLocalizedString(@"LAN Servers", nil);
         }
     }
@@ -151,13 +150,10 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     /* Servers section. */
     if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            MUPublicServerListController *serverList = [[[MUPublicServerListController alloc] init] autorelease];
-            [self.navigationController pushViewController:serverList animated:YES];
-        } else if (indexPath.row == 1) {
+       if (indexPath.row == 0) {
             MUFavouriteServerListController *favList = [[[MUFavouriteServerListController alloc] init] autorelease];
             [self.navigationController pushViewController:favList animated:YES];
-        } else if (indexPath.row == 2) {
+        } else if (indexPath.row == 1) {
             MULanServerListController *lanList = [[[MULanServerListController alloc] init] autorelease];
             [self.navigationController pushViewController:lanList animated:YES];
         }

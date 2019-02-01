@@ -60,7 +60,7 @@
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mumble" id="vdx-n0-PWB"/>
+                    <navigationItem key="navigationItem" title="PTT for IOS" id="vdx-n0-PWB"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
