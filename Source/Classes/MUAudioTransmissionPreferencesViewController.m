@@ -1,4 +1,4 @@
-// Copyright 2009-2011 The 'Mumble for iOS' Developers. All rights reserved.
+// Copyright 2009-2011 The 'PTT for iOS' Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -166,19 +166,17 @@
         lbl.numberOfLines = 0;
         lbl.contentMode = UIViewContentModeTop;
         if ([current isEqualToString:@"vad"]) {
-            lbl.text = NSLocalizedString(@"In Voice Activity mode, Mumble transmits\n"
+            lbl.text = NSLocalizedString(@"In Voice Activity mode, PTT transmits\n"
                                           @"your voice when it senses you talking.\n"
                                           @"Fine-tune it below:\n", nil);
             lbl.frame = CGRectMake(0, 0, tableView.bounds.size.width, 70.0f);
             parentView.frame = CGRectMake(0, 0, tableView.bounds.size.width, 80.0f);
         } else if ([current isEqualToString:@"ptt"]) {
-            lbl.text = NSLocalizedString(@"In Push-to-Talk mode, touch the mouth\n"
-                                          @"icon to speak to other people when\n"
-                                          @"connected to a server.\n", nil);
+            lbl.text = NSLocalizedString(@"IIn Push­to­Talk mode, touch the microphone\n icon to speak to other people when\nconnected to the server.\n", nil);
             lbl.frame = CGRectMake(0, 0, tableView.bounds.size.width, 70.0f);
             parentView.frame = CGRectMake(0, 0, tableView.bounds.size.width, 70.0f);
         } else if ([current isEqualToString:@"continuous"]) {
-            lbl.text = NSLocalizedString(@"In Continuous mode, Mumble will\n"
+            lbl.text = NSLocalizedString(@"In Continuous mode, PTT will\n"
                                           "continuously transmit all recorded audio.\n", nil);
             lbl.frame = CGRectMake(0, 0, tableView.bounds.size.width, 50.0f);
             parentView.frame = CGRectMake(0, 0, tableView.bounds.size.width, 50.0f);

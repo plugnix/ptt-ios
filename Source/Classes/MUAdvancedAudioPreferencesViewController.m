@@ -78,9 +78,10 @@
     } else if (section == 1) {
         return 2;
     } else if (section == 2) {
-        return 2;
-    } else if (section == 3) {
+        //return 2;
         return 1;
+    } else if (section == 3) {
+        return 0;
     }
     return 0;
 }
@@ -152,7 +153,7 @@
         }
     } else if ([indexPath section] == 2) {
         if ([indexPath row] == 0) {
-            cell.textLabel.text = NSLocalizedString(@"Sidetone", nil);
+            /*cell.textLabel.text = NSLocalizedString(@"Sidetone", nil);
             cell.detailTextLabel.textColor = [MUColor selectedTextColor];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             if ([defaults boolForKey:@"AudioSidetone"]) {
@@ -160,8 +161,7 @@
             } else {
                 cell.detailTextLabel.text = NSLocalizedString(@"Off", nil);
             }
-            cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        } else if ([indexPath row] == 1) {
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;*/
             cell.textLabel.text = NSLocalizedString(@"Speakerphone Mode", nil);
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             UISwitch *speakerPhoneSwitch = [[[UISwitch alloc] init] autorelease];
@@ -170,7 +170,17 @@
             speakerPhoneSwitch.enabled = YES;
             [speakerPhoneSwitch addTarget:self action:@selector(speakerPhoneModeChanged:) forControlEvents:UIControlEventValueChanged];
             cell.accessoryView = speakerPhoneSwitch;
-        }
+            
+        }/* else if ([indexPath row] == 1) {
+            cell.textLabel.text = NSLocalizedString(@"Speakerphone Mode", nil);
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            UISwitch *speakerPhoneSwitch = [[[UISwitch alloc] init] autorelease];
+            speakerPhoneSwitch.onTintColor = [UIColor blackColor];
+            speakerPhoneSwitch.on = [defaults boolForKey:@"AudioSpeakerPhoneMode"];
+            speakerPhoneSwitch.enabled = YES;
+            [speakerPhoneSwitch addTarget:self action:@selector(speakerPhoneModeChanged:) forControlEvents:UIControlEventValueChanged];
+            cell.accessoryView = speakerPhoneSwitch;
+        }*/
     } else if ([indexPath section] == 3) {
         if ([indexPath row] == 0) {
             cell.textLabel.text = NSLocalizedString(@"Force CELT Mode", nil);
@@ -194,8 +204,8 @@
         return [MUTableViewHeaderLabel labelWithText:NSLocalizedString(@"Audio Input", nil)];
     } else if (section == 2) { // Audio Output
         return [MUTableViewHeaderLabel labelWithText:NSLocalizedString(@"Audio Output", nil)];
-    } else if (section == 3) { // Opus Codec
-        return [MUTableViewHeaderLabel labelWithText:NSLocalizedString(@"Opus Codec", nil)];
+   // } else if (section == 3) { // Opus Codec
+   //     return [MUTableViewHeaderLabel labelWithText:NSLocalizedString(@"Opus Codec", nil)];
     } else {
         return nil;
     }

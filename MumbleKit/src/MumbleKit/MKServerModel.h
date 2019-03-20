@@ -432,7 +432,7 @@
 /// @class MKServerModel MKServerModel.h MumbleKit/MKServerModel.h
 ///
 /// MKServerModel wraps an MKConnection and acts as its message handler. It provides an
-/// easy to use interface for interacting with a Mumble server.
+/// easy to use interface for interacting with a plugnix Server.
 @interface MKServerModel : NSObject <MKMessageHandler>
 
 ///---------------------

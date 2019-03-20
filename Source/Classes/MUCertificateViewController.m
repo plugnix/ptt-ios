@@ -395,7 +395,7 @@ static const NSUInteger CertificateViewSectionTotal              = 4;
         NSString *password = [[alertView textFieldAtIndex:1] text];
         NSData *data = [MKCertificate exportCertificateChainAsPKCS12:_certificates withPassword:password];
         if (data == nil) {
-            NSString *unknownExportErrorMsg = NSLocalizedString(@"Mumble was unable to export the certificate.",
+            NSString *unknownExportErrorMsg = NSLocalizedString(@"plugnix was unable to export the certificate.",
                                                                 @"Error message shown for a failed export, cause unknown.");
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:exportFailedTitle
                                                                 message:unknownExportErrorMsg
@@ -484,7 +484,7 @@ static const NSUInteger CertificateViewSectionTotal              = 4;
     } else if (buttonIndex == [actionSheet destructiveButtonIndex]) { // Delete
         NSString *title = NSLocalizedString(@"Delete Certificate Chain", @"Certificate deletion warning title");
         NSString *msg = NSLocalizedString(@"Are you sure you want to delete this certificate chain?\n\n"
-                                          @"If you don't have a backup, this will permanently remove any rights associated with the certificate chain on any Mumble servers.",
+                                          @"If you don't have a backup, this will permanently remove any rights associated with the certificate chain on any plugnix Servers.",
                                                 @"Certificate deletion warning message");
         NSString *cancel = NSLocalizedString(@"Cancel", nil);
         NSString *delete = NSLocalizedString(@"Delete", nil);

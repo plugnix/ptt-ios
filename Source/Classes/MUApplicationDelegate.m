@@ -66,7 +66,7 @@
                                                                 [NSNumber numberWithFloat:0.6f],   @"AudioVADAbove",
                                                                 [NSNumber numberWithFloat:0.3f],   @"AudioVADBelow",
                                                                 @"amplitude",                      @"AudioVADKind",
-                                                                @"vad",                            @"AudioTransmitMethod",
+                                                                @"ptt",                            @"AudioTransmitMethod",
                                                                 [NSNumber numberWithBool:YES],     @"AudioPreprocessor",
                                                                 [NSNumber numberWithBool:YES],     @"AudioEchoCancel",
                                                                 [NSNumber numberWithFloat:1.0f],   @"AudioMicBoost",
@@ -74,10 +74,10 @@
                                                                 [NSNumber numberWithBool:NO],      @"AudioSidetone",
                                                                 [NSNumber numberWithFloat:0.2f],   @"AudioSidetoneVolume",
                                                                 [NSNumber numberWithBool:YES],     @"AudioSpeakerPhoneMode",
-                                                                [NSNumber numberWithBool:YES],     @"AudioOpusCodecForceCELTMode",
+                                                                [NSNumber numberWithBool:NO],     @"AudioOpusCodecForceCELTMode",
                                                                 // Network
-                                                                [NSNumber numberWithBool:NO],      @"NetworkForceTCP",
-                                                                @"MumbleUser",                     @"DefaultUserName",
+                                                                [NSNumber numberWithBool:YES],      @"NetworkForceTCP",
+                                                                @"plugnixUser",                     @"DefaultUserName",
                                                         nil]];
 
     // Disable mixer debugging for all builds.

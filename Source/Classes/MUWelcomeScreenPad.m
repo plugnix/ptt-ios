@@ -1,4 +1,4 @@
-// Copyright 2012 The 'Mumble for iOS' Developers. All rights reserved.
+// Copyright 2012 The 'plugnix for iOS' Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -82,7 +82,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    self.navigationItem.title = @"Mumble";
+    self.navigationItem.title = @"plugnix";
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
@@ -129,7 +129,7 @@
         if (indexPath.row == 0) {
             cell.textLabel.text = NSLocalizedString(@"Public Servers", nil);
         } else if (indexPath.row == 1) {
-            cell.textLabel.text = NSLocalizedString(@"Favourite Servers", nil);
+            cell.textLabel.text = NSLocalizedString(@"Favorite Servers", nil);
         } else if (indexPath.row == 2) {
             cell.textLabel.text = NSLocalizedString(@"LAN Servers", nil);
         }
@@ -179,11 +179,11 @@
 
 - (void) aboutButtonClicked:(id)sender {
 #ifdef MUMBLE_BETA_DIST
-    NSString *aboutTitle = [NSString stringWithFormat:@"Mumble %@ (%@)",
+    NSString *aboutTitle = [NSString stringWithFormat:@"plugnix %@ (%@)",
                             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"],
-                            [[NSBundle mainBundle] objectForInfoDictionaryKey:@"MumbleGitRevision"]];
+                            [[NSBundle mainBundle] objectForInfoDictionaryKey:@"plugnixGitRevision"]];
 #else
-    NSString *aboutTitle = [NSString stringWithFormat:@"Mumble %@",
+    NSString *aboutTitle = [NSString stringWithFormat:@"plugnix %@",
                             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
 #endif
     NSString *aboutMessage = NSLocalizedString(@"Low latency, high quality voice chat", nil);

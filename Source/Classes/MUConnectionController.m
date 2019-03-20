@@ -259,7 +259,7 @@ NSString *MUConnectionClosedNotification = @"MUConnectionClosedNotification";
         // what to do.
         [self hideConnectingView];
         NSString *title = NSLocalizedString(@"Unable to validate server certificate", nil);
-        NSString *msg = NSLocalizedString(@"Mumble was unable to validate the certificate chain of the server.", nil);
+        NSString *msg = NSLocalizedString(@"plugnix was unable to validate the certificate chain of the server.", nil);
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                         message:msg
                                                        delegate:self

@@ -72,7 +72,7 @@
         [_descriptionField setReturnKeyType:UIReturnKeyNext];
         [_descriptionField setAdjustsFontSizeToFitWidth:NO];
         [_descriptionField setTextAlignment:UITextAlignmentLeft];
-        [_descriptionField setPlaceholder:NSLocalizedString(@"Mumble Server", nil)];
+        [_descriptionField setPlaceholder:NSLocalizedString(@"plugnix Server", nil)];
         [_descriptionField setAutocapitalizationType:UITextAutocapitalizationTypeWords];
         [_descriptionField setText:[_favourite displayName]];
         [_descriptionField setClearButtonMode:UITextFieldViewModeWhileEditing];
@@ -236,9 +236,9 @@
 
     // View title
     if (!_editMode) {
-        [[self navigationItem] setTitle:NSLocalizedString(@"New Favourite", nil)];
+        [[self navigationItem] setTitle:NSLocalizedString(@"New Favorite", nil)];
     } else {
-        [[self navigationItem] setTitle:NSLocalizedString(@"Edit Favourite", nil)];
+        [[self navigationItem] setTitle:NSLocalizedString(@"Edit Favorite", nil)];
     }
 
     // Cancel button
@@ -305,7 +305,7 @@
     // Perform some basic tidying up. For example, for the port field, we
     // want the default port number to be used if it wasn't filled out.
     if ([_favourite displayName] == nil) {
-        [_favourite setDisplayName:NSLocalizedString(@"Mumble Server", nil)];
+        [_favourite setDisplayName:NSLocalizedString(@"plugnix Server", nil)];
     }
     if ([_favourite port] == 0) {
         [_favourite setPort:64738];

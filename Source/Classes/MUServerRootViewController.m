@@ -21,6 +21,8 @@
 
 #import "MKNumberBadgeView.h"
 
+#import "MUPreferencesViewController.h" // ADDED BRX
+
 @interface MUServerRootViewController () <MKConnectionDelegate, MKServerModelDelegate, UIActionSheetDelegate, UIAlertViewDelegate> {
     MKConnection                *_connection;
     MKServerModel               *_model;
@@ -46,6 +48,9 @@
     NSInteger                   _selfMuteIndex;
     NSInteger                   _selfDeafenIndex;
     NSInteger                   _selfUnmuteAndUndeafenIndex;
+    
+    NSInteger                   _preferences;
+    
 }
 @end
 
@@ -95,7 +100,9 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self.view setNeedsDisplay];
+    
     _segmentedControl = [[UISegmentedControl alloc] initWithItems:
                          [NSArray arrayWithObjects:
                             NSLocalizedString(@"Server", nil),
@@ -331,7 +338,14 @@
         _mixerDebugIndex = -1;
     }
     
-    _accessTokensIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Access Tokens", nil)];
+    //_accessTokensIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Access Tokens", nil)];
+    
+    /*
+    if (!inMessagesView)
+        _preferences = [actionSheet addButtonWithTitle:NSLocalizedString(@"Preferences", nil)];
+    else
+        _preferences = -1;
+    */
     
     if (!inMessagesView)
         _certificatesIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Certificates", nil)];
@@ -339,7 +353,7 @@
         _certificatesIndex = -1;
 
     if (![connUser isAuthenticated]) {
-        _selfRegisterIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Self-Register", nil)];
+   //     _selfRegisterIndex = [actionSheet addButtonWithTitle:NSLocalizedString(@"Self-Register", nil)];
     } else {
         _selfRegisterIndex = -1;
     }
@@ -376,7 +390,9 @@
 }
 
 - (void) childDoneButton:(id)sender {
-    [[self modalViewController] dismissModalViewControllerAnimated:YES];
+ //   [[self modalViewController] dismissModalViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:NO completion:nil];
+    
 }
 
 - (void) modeSwitchButtonReleased:(id)sender {
@@ -387,7 +403,7 @@
 
 - (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) { // Self-Register
-        [_model registerConnectedUser];
+     //   [_model registerConnectedUser];
     }
 }
 
@@ -407,12 +423,12 @@
         [self presentModalViewController:navCtrl animated:YES];
         [audioMixerDebugViewController release];
         [navCtrl release];
-    } else if (buttonIndex == _accessTokensIndex) {
+   /* } else if (buttonIndex == _accessTokensIndex) {
         MUAccessTokenViewController *tokenViewController = [[MUAccessTokenViewController alloc] initWithServerModel:_model];
         UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:tokenViewController];
         [self presentModalViewController:navCtrl animated:YES];
         [tokenViewController release];
-        [navCtrl release];
+        [navCtrl release];*/
     } else if (buttonIndex == _certificatesIndex) { // Certificates
         MUCertificateViewController *certView = [[MUCertificateViewController alloc] initWithCertificates:[_model serverCertificates]];
         UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:certView];
@@ -422,7 +438,7 @@
         [self presentModalViewController:navCtrl animated:YES];
         [certView release];
         [navCtrl release];
-    } else if (buttonIndex == _selfRegisterIndex) { // Self-Register
+    /*} else if (buttonIndex == _selfRegisterIndex) { // Self-Register
         NSString *title = NSLocalizedString(@"User Registration", nil);
         NSString *msg = [NSString stringWithFormat:
                             NSLocalizedString(@"You are about to register yourself on this server. "
@@ -437,7 +453,7 @@
                                                   cancelButtonTitle:NSLocalizedString(@"No", nil)
                                                   otherButtonTitles:NSLocalizedString(@"Yes", nil), nil];
         [alertView show];
-        [alertView release];
+        [alertView release];*/
     } else if (buttonIndex == _clearMessagesIndex) { // Clear Messages
         [_messagesView clearAllMessages];
     } else if (buttonIndex == _selfMuteIndex) { // Self-Mute, Unmute Self
@@ -446,6 +462,22 @@
         [_model setSelfMuted:[connUser isSelfMuted] andSelfDeafened:![connUser isSelfDeafened]];
     } else if (buttonIndex == _selfUnmuteAndUndeafenIndex) { // Unmute and undeafen
         [_model setSelfMuted:NO andSelfDeafened:NO];
+    } else if (buttonIndex == _preferences) { // Unmute and undeafen
+       // MUPreferencesViewController *prefsView = [[[MUPreferencesViewController alloc] init] autorelease];
+       // [self presentModalViewController:prefsView animated:YES];
+         // [_model setSelfMuted:NO andSelfDeafened:NO];
+        
+        /*
+        MUPreferencesViewController *prefsView = [[[MUPreferencesViewController alloc] init] autorelease];
+        UINavigationController *navPref = [[UINavigationController alloc] initWithRootViewController:prefsView];
+        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(childDoneButton:)];
+        prefsView.navigationItem.leftBarButtonItem = doneButton;
+        [doneButton release];
+        [self presentViewController:navPref animated:YES completion:nil];
+        [MUPreferencesViewController release];
+        [navPref release];*/
+
+ 
     }
 }
 

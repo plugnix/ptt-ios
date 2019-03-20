@@ -249,7 +249,7 @@ typedef enum {
 
 /// @class MKConnection MKConnection.h MumbleKit/MKConnection.h
 ///
-/// MKConnection represents a connection to a Mumble server.
+/// MKConnection represents a connection to a plugnix Server.
 /// It is mostly used together with MKServerModel which translates the wire protocol
 /// to Objective-C delegate callbacks.
 @interface MKConnection : NSThread <NSStreamDelegate>
@@ -300,15 +300,15 @@ typedef enum {
 
 #pragma mark Server Info
 
-/// A textual description of the version number of the Mumble server that the MKConnection
+/// A textual description of the version number of the plugnix Server that the MKConnection
 /// object is currently connected to.
 - (NSString *) serverVersion;
 
-/// A textual description of the release name of the Mumble server that the MKConnection
+/// A textual description of the release name of the plugnix Server that the MKConnection
 /// object is currently connected to.
 - (NSString *) serverRelease;
 
-/// A textual description of the operating system that powers the Mumble server that the
+/// A textual description of the operating system that powers the plugnix Server that the
 /// MKConnection object is currently connected to.
 - (NSString *) serverOSName;
 
@@ -322,7 +322,7 @@ typedef enum {
 
 /// Once a connection has been established (that is, once the connectionOpened: delegate
 /// method has been called), this method must be used to authenticate with the remote
-/// Mumble server.
+/// plugnix Server.
 ///
 /// @param user The username of the user that the MKConnection should authenticate
 ///             itself as. This can be a registered user, or a new user that is currently
@@ -401,7 +401,7 @@ typedef enum {
 ///----------------------------------------
 
 /// Transmits a blob of data (presumed to be a message encoded as expected by
-/// the Mumble server) using the given messageType as the token used for identifying
+/// the plugnix Server) using the given messageType as the token used for identifying
 /// how the contents of the message are to be handled by the remote server.
 ///
 /// @param messageType  A MKMessageType describing the kind of message that is to be

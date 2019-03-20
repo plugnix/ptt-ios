@@ -41,7 +41,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    self.navigationItem.title = @"PTT";
+    self.navigationItem.title = @"plugnix";
     self.navigationController.toolbarHidden = YES;
 
     UINavigationBar *navBar = self.navigationController.navigationBar;
@@ -64,18 +64,18 @@
     self.tableView.scrollEnabled = NO;
     
 #if MUMBLE_LAUNCH_IMAGE_CREATION != 1
-    UIBarButtonItem *about = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"About", nil)
+   /* UIBarButtonItem *about = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"About", nil)
                                                               style:UIBarButtonItemStyleBordered
                                                              target:self
                                                              action:@selector(aboutClicked:)];
     [self.navigationItem setRightBarButtonItem:about];
-    [about release];
+    [about release];*/
     
     UIBarButtonItem *prefs = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Preferences", nil)
                                                               style:UIBarButtonItemStyleBordered
                                                              target:self
                                                              action:@selector(prefsClicked:)];
-    [self.navigationItem setLeftBarButtonItem:prefs];
+    [self.navigationItem setRightBarButtonItem:prefs];
     [prefs release];
 #endif
 }
@@ -97,7 +97,7 @@
     return 1;
 #endif
     if (section == 0)
-        return 2 ;
+        return 1 ;
     return 0;
 }
 
@@ -130,15 +130,18 @@
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    //cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    
+    
     
     /* Servers section. */
     if (indexPath.section == 0) {
        if (indexPath.row == 0) {
             cell.textLabel.text = NSLocalizedString(@"My Servers", nil);
         }
-        else if (indexPath.row == 1) {
+       /* else if (indexPath.row == 1) {
             cell.textLabel.text = NSLocalizedString(@"LAN Servers", nil);
-        }
+        }*/
     }
 
     [[cell textLabel] setHidden: NO];

@@ -13,7 +13,7 @@ typedef enum {
 
 /// @class MKUser MKUser.h MumbleKit/MKUser.h
 ///
-/// MKUser represents a user on a Mumble server. A user always resides in a channel, which is
+/// MKUser represents a user on a plugnix Server. A user always resides in a channel, which is
 ///represented by the MKChannel object. MKChannel objects are owned by their respective MKServerModel
 /// instances.
 ///

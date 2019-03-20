@@ -19,7 +19,7 @@
                BlueprintIdentifier = "285D6B7B16BF02E900F239EB"
                BuildableName = "MumbleTests.octest"
                BlueprintName = "MumbleTests"
-               ReferencedContainer = "container:Mumble.xcodeproj">
+               ReferencedContainer = "container:plugnix.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

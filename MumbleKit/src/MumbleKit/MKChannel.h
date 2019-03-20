@@ -6,7 +6,7 @@
 
 /// @class MKChannel MKChannel.h MumbleKit/MKChannel.h
 ///
-/// MKChannel represents a channel on a Mumble server. MKChannel objects are owned
+/// MKChannel represents a channel on a plugnix Server. MKChannel objects are owned
 /// by their respective MKServerModel instances.
 ///
 /// The object's MKServerModel may change properties of the channel at any time, but

@@ -105,7 +105,7 @@
 #ifdef ENABLE_REMOTE_CONTROL
         return 3;
 #else
-        return 2;
+        return 1;
 #endif
     }
 
@@ -163,16 +163,17 @@
 
     // Network
     } else if ([indexPath section] == 1) {
-        if ([indexPath row] == 0) {
-            UISwitch *tcpSwitch = [[UISwitch alloc] init];
+        //if ([indexPath row] == 0) {
+            /*UISwitch *tcpSwitch = [[UISwitch alloc] init];
             [tcpSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"NetworkForceTCP"]];
             [[cell textLabel] setText:NSLocalizedString(@"Force TCP", nil)];
             [cell setAccessoryView:tcpSwitch];
             [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
             [tcpSwitch setOnTintColor:[UIColor blackColor]];
             [tcpSwitch addTarget:self action:@selector(forceTCPChanged:) forControlEvents:UIControlEventValueChanged];
-            [tcpSwitch release];
-        } else if ([indexPath row] == 1) {
+            [tcpSwitch release];*/
+       // } else if ([indexPath row] == 1) {
+         if ([indexPath row] == 0) {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PrefCertificateCell"];
             if (cell == nil)
                 cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"PrefCertificateCell"] autorelease];

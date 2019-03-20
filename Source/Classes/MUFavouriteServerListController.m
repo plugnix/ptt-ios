@@ -54,7 +54,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    [[self navigationItem] setTitle:NSLocalizedString(@"Favourite Servers", nil)];
+    [[self navigationItem] setTitle:NSLocalizedString(@"My Servers", nil)];
     
     UINavigationBar *navBar = self.navigationController.navigationBar;
     if (MUGetOperatingSystemVersion() >= MUMBLE_OS_IOS_7) {
@@ -127,7 +127,7 @@
                                               cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
                                          destructiveButtonTitle:NSLocalizedString(@"Delete", nil)
                                               otherButtonTitles:NSLocalizedString(@"Edit", nil),
-                                                                NSLocalizedString(@"Connect", nil), nil];
+                                                                NSLocalizedString(@"Connect", nil),nil];
     [sheet setActionSheetStyle:UIActionSheetStyleBlackOpaque];
     if (pad) {
         CGRect frame = cellView.frame;

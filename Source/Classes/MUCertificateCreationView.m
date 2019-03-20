@@ -317,7 +317,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
                 }
             } else {
                 NSString *title = NSLocalizedString(@"Import Error", nil);
-                NSString *msg = NSLocalizedString(@"Mumble was unable to import the generated certificate.",
+                NSString *msg = NSLocalizedString(@"plugnix was unable to import the generated certificate.",
                                                   @"Generic certificate import error message body.");
                 ShowAlertDialog(title, msg);
             }

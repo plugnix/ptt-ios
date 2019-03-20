@@ -190,6 +190,7 @@
 		28FAA35F14D74C1600F6D711 /* SmallMumbleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FAA35D14D74C1600F6D711 /* SmallMumbleIcon.png */; };
 		28FAA36014D74C1600F6D711 /* SmallMumbleIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28FAA35E14D74C1600F6D711 /* SmallMumbleIcon@2x.png */; };
 		28FAA36414D7551600F6D711 /* MKNumberBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA36314D7551600F6D711 /* MKNumberBadgeView.m */; };
+		484EC021222C3B4B00009200 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484EC020222C3B4B00009200 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -482,6 +483,7 @@
 		28FAA36314D7551600F6D711 /* MKNumberBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKNumberBadgeView.m; path = Dependencies/MKNumberBadgeView/MKNumberBadgeView.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Mumble.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mumble.pch; path = Source/Mumble.pch; sourceTree = "<group>"; };
+		484EC020222C3B4B00009200 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Mumble/Images.xcassets; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -787,6 +789,7 @@
 		28DC1C1213DE59120037CDC2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				484EC020222C3B4B00009200 /* Images.xcassets */,
 				286A3CBF158CFEAB00C817D1 /* _UIPopoverViewBlackBackgroundArrowUp.png */,
 				286A3CC0158CFEAB00C817D1 /* _UIPopoverViewBlackBackgroundArrowUp@2x.png */,
 				2879527A14C248B700567430 /* Apple */,
@@ -950,9 +953,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* Mumble */ = {
+		1D6058900D05DD3D006BFB54 /* plugnix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Mumble" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "plugnix" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -963,7 +966,7 @@
 			dependencies = (
 				28990AAF132FDA4B0034B406 /* PBXTargetDependency */,
 			);
-			name = Mumble;
+			name = plugnix;
 			productName = Mumble;
 			productReference = 1D6058910D05DD3D006BFB54 /* Mumble.app */;
 			productType = "com.apple.product-type.application";
@@ -996,11 +999,12 @@
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = J9J829L593;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mumble" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "plugnix" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -1022,7 +1026,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Mumble */,
+				1D6058900D05DD3D006BFB54 /* plugnix */,
 				285D6B7B16BF02E900F239EB /* MumbleTests */,
 			);
 		};
@@ -1131,6 +1135,7 @@
 				2879528C14C3874C00567430 /* RightBalloonSelected.png in Resources */,
 				2879528D14C3874C00567430 /* RightBalloonSelected@2x.png in Resources */,
 				287A686714C6FB9F008B1BE7 /* GrayCheckmark.png in Resources */,
+				484EC021222C3B4B00009200 /* Images.xcassets in Resources */,
 				287A686814C6FB9F008B1BE7 /* GrayCheckmark@2x.png in Resources */,
 				28FAA35F14D74C1600F6D711 /* SmallMumbleIcon.png in Resources */,
 				28FAA36014D74C1600F6D711 /* SmallMumbleIcon@2x.png in Resources */,
@@ -1305,11 +1310,12 @@
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PRODUCT_BUNDLE_IDENTIFIER = test.mumble.Mumble;
+				DEVELOPMENT_TEAM = J9J829L593;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1319,11 +1325,12 @@
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PRODUCT_BUNDLE_IDENTIFIER = test.mumble.Mumble;
+				DEVELOPMENT_TEAM = J9J829L593;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1467,11 +1474,12 @@
 		2887C88A1454C4C2009B3576 /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PRODUCT_BUNDLE_IDENTIFIER = test.mumble.Mumble;
+				DEVELOPMENT_TEAM = J9J829L593;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1488,11 +1496,12 @@
 		28BC1E7B1227155500C03FCF /* BetaDist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PRODUCT_BUNDLE_IDENTIFIER = test.mumble.Mumble;
+				DEVELOPMENT_TEAM = J9J829L593;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1517,7 +1526,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Mumble" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "plugnix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -1539,7 +1548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Mumble" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "plugnix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

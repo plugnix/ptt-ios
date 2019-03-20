@@ -1,4 +1,4 @@
-// Copyright 2009-2010 The 'Mumble for iOS' Developers. All rights reserved.
+// Copyright 2009-2010 The 'plugnix for iOS' Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -148,7 +148,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (_showHelp) {
         NSString *help = NSLocalizedString(@"To import your own certificate into\n"
-                                           @"Mumble, please transfer them to your\n"
+                                           @"plugnix, please transfer them to your\n"
                                            @"device using iTunes File Transfer.",
                                            @"Help text for iTunes File Transfer (iTunes Import)");
         MUTableViewHeaderLabel *lbl = [MUTableViewHeaderLabel labelWithText:help];
@@ -186,7 +186,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
     NSData *transformedPkcs12Data = [leaf exportPKCS12WithPassword:@""];
     if (transformedPkcs12Data == nil) {
         ShowAlertDialog(NSLocalizedString(@"Import Error", nil),
-                        NSLocalizedString(@"Mumble was unable to export the specified certificate.",
+                        NSLocalizedString(@"plugnix was unable to export the specified certificate.",
                                           @"Error shown when when the conversion from PKCS12 to DER-encoded X.509 fails."));
         [[self tableView] deselectRowAtIndexPath:_attemptIndexPath animated:YES];
         return;
@@ -203,7 +203,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
             SecCertificateRef secCert = SecCertificateCreateWithData(NULL, (CFDataRef)[cert certificate]);
             if (secCert == NULL) {
                 ShowAlertDialog(NSLocalizedString(@"Import Error", nil),
-                                NSLocalizedString(@"Mumble was unable to import one of the intermediate certificates in the certificate chain.", nil));
+                                NSLocalizedString(@"plugnix was unable to import one of the intermediate certificates in the certificate chain.", nil));
                 continue;
             }
 
@@ -215,7 +215,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
                     // Duplicates are OK in this case.
                 } else {
                     ShowAlertDialog(NSLocalizedString(@"Import Error", nil),
-                                    NSLocalizedString(@"Mumble was unable to import one of the intermediate certificates in the certificate chain.", nil));
+                                    NSLocalizedString(@"plugnix was unable to import one of the intermediate certificates in the certificate chain.", nil));
                 }
             }
             
@@ -254,7 +254,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
                                               @"Error body when adding a certificate fails because of a subject name clash."));
         } else {
             NSString *msg = [NSString stringWithFormat:
-                                NSLocalizedString(@"Mumble was unable to import the certificate.\nError Code: %li",
+                                NSLocalizedString(@"plugnix was unable to import the certificate.\nError Code: %li",
                                                   @"Generic import error (with error code) for iTunes Import."), (long int)err];
             ShowAlertDialog(@"Import Error", msg);
         }
@@ -268,7 +268,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
         ShowAlertDialog(NSLocalizedString(@"Import Error", nil), @"Unable to decode PKCS12 file");
         [[self tableView] deselectRowAtIndexPath:_attemptIndexPath animated:YES];
     } else {
-        NSString *msg = NSLocalizedString(@"Mumble was unable to import the certificate.",
+        NSString *msg = NSLocalizedString(@"plugnix was unable to import the certificate.",
                                           @"Generic import error for iTunes Import.");
         ShowAlertDialog(NSLocalizedString(@"Import Error", nil), msg);
         [[self tableView] deselectRowAtIndexPath:_attemptIndexPath animated:YES];
@@ -347,7 +347,7 @@ static void ShowAlertDialog(NSString *title, NSString *msg) {
     NSString *title = NSLocalizedString(@"Remove Importable Certificates",
                                         @"Title for remove all importable certificates UIAlertView.");
     NSString *msg = NSLocalizedString(@"Are you sure you want to delete all importable certificates?\n\n"
-                                      @"Certificates already imported into Mumble will not be touched.",
+                                      @"Certificates already imported into plugnix will not be touched.",
                                       @"Body for remove all importable certificates UIAlertView");
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:msg
