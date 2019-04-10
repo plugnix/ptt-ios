@@ -44,6 +44,8 @@
 #endif
 
 /* A couple test to catch stupid option combinations */
+
+#define FLOATING_POINT 
 #ifdef FIXED_POINT
 
 #ifdef FLOATING_POINT

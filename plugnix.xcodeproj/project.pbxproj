@@ -999,7 +999,7 @@
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = J9J829L593;
+						DevelopmentTeam = 45746M4NS2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1314,8 +1314,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9J829L593;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
+				DEVELOPMENT_TEAM = 45746M4NS2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnixLLC.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1329,8 +1329,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9J829L593;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
+				DEVELOPMENT_TEAM = 45746M4NS2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnixLLC.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1478,8 +1478,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9J829L593;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
+				DEVELOPMENT_TEAM = 45746M4NS2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnixLLC.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1500,8 +1500,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J9J829L593;
-				PRODUCT_BUNDLE_IDENTIFIER = com.plugnix.PlugnixDemoPTT;
+				DEVELOPMENT_TEAM = 45746M4NS2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.plugnixLLC.PlugnixDemoPTT;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
